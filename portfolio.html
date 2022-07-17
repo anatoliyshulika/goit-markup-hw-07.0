@@ -16,58 +16,68 @@
     />
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="stylesheet" href="./js/modal.js" />
-    <title>GoIT Home Work 4</title>
+    <title>GoIT Home Work 7</title>
   </head>
   <body>
     <!-- --------------------------------Header--------------------------------- -->
     <header class="header">
-      <div class="container header-flex">
-        <a class="logo" href="./index.html" lang="en"
-          >Web<span class="logo-header">Studio</span></a
-        >
+      <div class="container flex-between">
         <!-- -----------------------Navigation -->
-        <nav>
-          <ul class="list-nav list">
-            <li>
-              <a class="header-link" href="./index.html">Студия</a>
-            </li>
-            <li>
-              <a class="header-link current" href="./portfolio.html"
-                >Портфолио</a
-              >
-            </li>
-            <li>
-              <a
-                class="header-link"
-                href="https://github.com/anatoliyshulika/goit-markup-hw-01"
-                >Контакты</a
-              >
-            </li>
-          </ul>
-        </nav>
+        <div class="flex-between">
+          <a class="logo header__logo" href="./index.html" lang="en"
+            >Web<span class="logo--dark">Studio</span></a
+          >
+          <nav>
+            <ul class="header__nav grid">
+              <li>
+                <a class="header__link" href="./index.html">Студия</a>
+              </li>
+              <li>
+                <a
+                  class="header__link header__link--current"
+                  href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li>
+                <a
+                  class="header__link"
+                  href="https://github.com/anatoliyshulika/goit-markup-hw-01"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- -----------------------Navigation -->
+
         <!-- -----------------------Contacts -->
-        <ul class="header-contact-list list">
+        <ul class="header__contacts grid">
           <li>
             <a
-              class="header-link contact-link"
+              class="header__link header__link--color"
               href="mailto:shulika.anatoliy2@gmail.com"
               lang="en"
             >
-              <svg class="icon" width="16" height="12">
+              <svg class="icon header__icon" width="16" height="12">
                 <use href="./images/svg/icons.svg#envelope"></use>
               </svg>
               <span>shulika.anatoliy2@gmail.com</span>
             </a>
           </li>
           <li>
-            <a class="header-link contact-link" href="tel:+380675731589">
-              <svg class="icon" width="10" height="16">
+            <a
+              class="header__link header__link--color"
+              href="tel:+380675731589"
+            >
+              <svg class="icon header__icon" width="10" height="16">
                 <use href="./images/svg/icons.svg#smartphone"></use>
               </svg>
               <span>+38 067 573 1589</span></a
             >
           </li>
         </ul>
+        <!-- -----------------------Contacts -->
       </div>
     </header>
     <!-- --------------------------------Header--------------------------------- -->
@@ -77,36 +87,40 @@
       <section class="section">
         <div class="container">
           <h1 class="visually-hidden">Портфолио</h1>
-          <ul class="btn-list">
-            <li class="item">
-              <button class="works-btn" type="button">Все</button>
+          <ul class="filter">
+            <li>
+              <button class="filter__btn" type="button">Все</button>
             </li>
-            <li class="item">
-              <button class="works-btn" type="button">Веб-сайты</button>
+            <li>
+              <button class="filter__btn" type="button">Веб-сайты</button>
             </li>
-            <li class="item">
-              <button class="works-btn" type="button">Приложения</button>
+            <li>
+              <button class="filter__btn" type="button">Приложения</button>
             </li>
-            <li class="item">
-              <button class="works-btn" type="button">Дизайн</button>
+            <li>
+              <button class="filter__btn" type="button">Дизайн</button>
             </li>
-            <li class="item">
-              <button class="works-btn" type="button">Маркетинг</button>
+            <li>
+              <button class="filter__btn" type="button">Маркетинг</button>
             </li>
           </ul>
           <!-- ---------------work list -->
-          <ul class="list work-list">
+          <ul class="portfolio grid">
             <!-- Технокряк -->
-            <li class="item">
-              <a class="work-list-link" href="">
-                <div class="card">
+            <li class="grid__item">
+              <div
+                class="card"
+                role="link"
+                onclick="location.href='https://css-tricks.com/creating-clickable-divs/';"
+              >
+                <div class="card__overlay-holder">
                   <img
                     src="./images/portfolio/tekhnokrak.jpg"
                     width="370"
                     height="294"
                     alt="Ноутбук с фото на экране"
                   />
-                  <div class="overlay">
+                  <div class="card__overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -115,23 +129,27 @@
                     </p>
                   </div>
                 </div>
-                <div class="card-container">
-                  <h2 class="work-title titles">Технокряк</h2>
-                  <p class="discr-title">Веб-сайт</p>
+                <div class="card__desc">
+                  <h2 class="card__title titles">Технокряк</h2>
+                  <p class="card__prod-type">Веб-сайт</p>
                 </div>
-              </a>
+              </div>
             </li>
             <!-- Постер New Orlean vs Golden Star -->
-            <li class="item">
-              <a class="work-list-link" href="">
-                <div class="card">
+            <li class="grid__item">
+              <div
+                class="card"
+                role="link"
+                onclick="location.href='https://css-tricks.com/creating-clickable-divs/';"
+              >
+                <div class="card__overlay-holder">
                   <img
                     src="./images/portfolio/orlean-vs-golden-star.jpg"
                     width="370"
                     height="294"
                     alt="Постер New Orlean vs Golden Star"
                   />
-                  <div class="overlay">
+                  <div class="card__overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -140,25 +158,29 @@
                     </p>
                   </div>
                 </div>
-                <div class="card-container">
-                  <h2 class="work-title titles">
+                <div class="card__desc">
+                  <h2 class="card__title titles">
                     Постер New Orlean vs Golden Star
                   </h2>
-                  <p class="discr-title">Дизайн</p>
+                  <p class="card__prod-type">Дизайн</p>
                 </div>
-              </a>
+              </div>
             </li>
             <!-- Ресторан Seafood -->
-            <li class="item">
-              <a class="work-list-link" href="">
-                <div class="card">
+            <li class="grid__item">
+              <div
+                class="card"
+                role="link"
+                onclick="location.href='https://css-tricks.com/creating-clickable-divs/';"
+              >
+                <div class="card__overlay-holder">
                   <img
                     src="./images/portfolio/seafood.jpg"
                     width="370"
                     height="294"
                     alt="Логотип ресторана сифуд"
                   />
-                  <div class="overlay">
+                  <div class="card__overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -167,23 +189,27 @@
                     </p>
                   </div>
                 </div>
-                <div class="card-container">
-                  <h2 class="work-title titles">Ресторан Seafood</h2>
-                  <p class="discr-title">Приложение</p>
+                <div class="card__desc">
+                  <h2 class="card__title titles">Ресторан Seafood</h2>
+                  <p class="card__prod-type">Приложение</p>
                 </div>
-              </a>
+              </div>
             </li>
             <!-- Проект Prime -->
-            <li class="item">
-              <a class="work-list-link" href="">
-                <div class="card">
+            <li class="grid__item">
+              <div
+                class="card"
+                role="link"
+                onclick="location.href='https://css-tricks.com/creating-clickable-divs/';"
+              >
+                <div class="card__overlay-holder">
                   <img
                     src="./images/portfolio/prime.jpg"
                     width="370"
                     height="294"
                     alt="Наушники"
                   />
-                  <div class="overlay">
+                  <div class="card__overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -192,23 +218,27 @@
                     </p>
                   </div>
                 </div>
-                <div class="card-container">
-                  <h2 class="work-title titles">Проект Prime</h2>
-                  <p class="discr-title">Маркетинг</p>
+                <div class="card__desc">
+                  <h2 class="card__title titles">Проект Prime</h2>
+                  <p class="card__prod-type">Маркетинг</p>
                 </div>
-              </a>
+              </div>
             </li>
             <!-- Проект Boxes -->
-            <li class="item">
-              <a class="work-list-link" href="">
-                <div class="card">
+            <li class="grid__item">
+              <div
+                class="card"
+                role="link"
+                onclick="location.href='https://css-tricks.com/creating-clickable-divs/';"
+              >
+                <div class="card__overlay-holder">
                   <img
                     src="./images/portfolio/boxes.jpg"
                     width="370"
                     height="294"
                     alt="Картонные коробки"
                   />
-                  <div class="overlay">
+                  <div class="card__overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -217,23 +247,27 @@
                     </p>
                   </div>
                 </div>
-                <div class="card-container">
-                  <h2 class="work-title titles">Проект Boxes</h2>
-                  <p class="discr-title">Приложение</p>
+                <div class="card__desc">
+                  <h2 class="card__title titles">Проект Boxes</h2>
+                  <p class="card__prod-type">Приложение</p>
                 </div>
-              </a>
+              </div>
             </li>
             <!-- Inspiration has no Borders -->
-            <li class="item">
-              <a class="work-list-link" href="">
-                <div class="card">
+            <li class="grid__item">
+              <div
+                class="card"
+                role="link"
+                onclick="location.href='https://css-tricks.com/creating-clickable-divs/';"
+              >
+                <div class="card__overlay-holder">
                   <img
                     src="./images/portfolio/inspiration-has-no-borders.jpg"
                     width="370"
                     height="294"
                     alt="Монитор с изображением сайта"
                   />
-                  <div class="overlay">
+                  <div class="card__overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -242,23 +276,27 @@
                     </p>
                   </div>
                 </div>
-                <div class="card-container">
-                  <h2 class="work-title titles">Inspiration has no Borders</h2>
-                  <p class="discr-title">Веб-сайт</p>
+                <div class="card__desc">
+                  <h2 class="card__title titles">Inspiration has no Borders</h2>
+                  <p class="card__prod-type">Веб-сайт</p>
                 </div>
-              </a>
+              </div>
             </li>
             <!-- Издание Limited Edition -->
-            <li class="item">
-              <a class="work-list-link" href="">
-                <div class="card">
+            <li class="grid__item">
+              <div
+                class="card"
+                role="link"
+                onclick="location.href='https://css-tricks.com/creating-clickable-divs/';"
+              >
+                <div class="card__overlay-holder">
                   <img
                     src="./images/portfolio/limited-edition.jpg"
                     width="370"
                     height="294"
                     alt="Развернутая книга"
                   />
-                  <div class="overlay">
+                  <div class="card__overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -267,23 +305,27 @@
                     </p>
                   </div>
                 </div>
-                <div class="card-container">
-                  <h2 class="work-title titles">Издание Limited Edition</h2>
-                  <p class="discr-title">Дизайн</p>
+                <div class="card__desc">
+                  <h2 class="card__title titles">Издание Limited Edition</h2>
+                  <p class="card__prod-type">Дизайн</p>
                 </div>
-              </a>
+              </div>
             </li>
             <!-- Проект LAB -->
-            <li class="item">
-              <a class="work-list-link" href="">
-                <div class="card">
+            <li class="grid__item">
+              <div
+                class="card"
+                role="link"
+                onclick="location.href='https://css-tricks.com/creating-clickable-divs/';"
+              >
+                <div class="card__overlay-holder">
                   <img
                     src="./images/portfolio/lab.jpg"
                     width="370"
                     height="294"
                     alt="Бирка с надписью"
                   />
-                  <div class="overlay">
+                  <div class="card__overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -292,23 +334,27 @@
                     </p>
                   </div>
                 </div>
-                <div class="card-container">
-                  <h2 class="work-title titles">Проект LAB</h2>
-                  <p class="discr-title">Маркетинг</p>
+                <div class="card__desc">
+                  <h2 class="card__title titles">Проект LAB</h2>
+                  <p class="card__prod-type">Маркетинг</p>
                 </div>
-              </a>
+              </div>
             </li>
             <!-- Growing Business -->
-            <li class="item">
-              <a class="work-list-link" href="">
-                <div class="card">
+            <li class="grid__item">
+              <div
+                class="card"
+                role="link"
+                onclick="location.href='https://css-tricks.com/creating-clickable-divs/';"
+              >
+                <div class="card__overlay-holder">
                   <img
                     src="./images/portfolio/growing-business.jpg"
                     width="370"
                     height="294"
                     alt="Ноутбук с приложением на экране"
                   />
-                  <div class="overlay">
+                  <div class="card__overlay">
                     <p>
                       Ресурс предлагает комплексные предложения с разным уровнем
                       функционала и сервисов. Все это позволит посетителю
@@ -317,11 +363,11 @@
                     </p>
                   </div>
                 </div>
-                <div class="card-container">
-                  <h2 class="work-title titles">Growing Business</h2>
-                  <p class="discr-title">Приложение</p>
+                <div class="card__desc">
+                  <h2 class="card__title titles">Growing Business</h2>
+                  <p class="card__prod-type">Приложение</p>
                 </div>
-              </a>
+              </div>
             </li>
           </ul>
           <!-- ---------------work list -->
@@ -332,29 +378,29 @@
 
     <!-- --------------------------------Footer--------------------------------- -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-address">
+      <div class="container footer__container">
+        <div class="address">
           <a class="logo" href="./index.html" lang="en"
-            >Web<span class="logo-footer">Studio</span></a
+            >Web<span class="logo--white">Studio</span></a
           >
           <address>
-            <ul class="address-list">
-              <li class="item">
-                <p class="post-address">г. Киев, пр-т Леси Украинки, 26</p>
+            <ul class="address__list">
+              <li class="address__item">
+                <p class="address__post">г. Киев, пр-т Леси Украинки, 26</p>
               </li>
-              <li class="item">
+              <li class="address__item">
                 <p>
                   <a
-                    class="link-address"
+                    class="address__link"
                     href="mailto:shulika.anatoliy2@gmail.com"
                     lang="en"
                     >shulika.anatoliy2@gmail.com</a
                   >
                 </p>
               </li>
-              <li class="item">
+              <li class="address__item">
                 <p>
-                  <a class="link-address" href="tel:+380675731589"
+                  <a class="address__link" href="tel:+380675731589"
                     >+38 067 573 1589</a
                   >
                 </p>
@@ -363,11 +409,11 @@
           </address>
         </div>
         <div>
-          <p class="join">Присоединяйтесь</p>
-          <ul class="list social-list social-footer">
-            <li class="item">
+          <p class="footer__slogan">Присоединяйтесь</p>
+          <ul class="socials grid">
+            <li>
               <a
-                class="social-link"
+                class="socials__link socials__link--color flex-center"
                 href=""
                 target="_blank"
                 rel="noreferrer noopener"
@@ -379,9 +425,9 @@
                 </svg>
               </a>
             </li>
-            <li class="item">
+            <li>
               <a
-                class="social-link"
+                class="socials__link socials__link--color flex-center"
                 href=""
                 target="_blank"
                 rel="noreferrer noopener"
@@ -393,9 +439,9 @@
                 </svg>
               </a>
             </li>
-            <li class="item">
+            <li>
               <a
-                class="social-link"
+                class="socials__link socials__link--color flex-center"
                 href="https://www.facebook.com/profile.php?id=100005367284716"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -407,9 +453,9 @@
                 </svg>
               </a>
             </li>
-            <li class="item">
+            <li>
               <a
-                class="social-link"
+                class="socials__link socials__link--color flex-center"
                 href="https://www.linkedin.com/in/anatoliy-shulika-77a064154"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -423,18 +469,18 @@
             </li>
           </ul>
         </div>
-        <div class="footer-form-container">
-          <strong class="join">Подпишитесь на рассылку</strong>
-          <form class="subscribe-form" name="subscribe" method="">
+        <div class="footer__form-wrapper">
+          <strong class="footer__slogan">Подпишитесь на рассылку</strong>
+          <form class="subscribe" name="subscribe" method="">
             <label>
               <input
-                class="subscribe-input"
+                class="subscribe__input"
                 type="email"
                 placeholder="E-mail"
                 required
               />
             </label>
-            <button type="submit" class="subscribe-btn">
+            <button type="submit" class="form-btn subscribe__form-btn">
               Подписаться
               <svg class="icon" width="24" height="24">
                 <use href="./images/svg/icons.svg#icon-send"></use>
