@@ -236,7 +236,7 @@ img {
   margin-right: 93px;
 }
 
-.logo--dark {
+.header__logo--dark {
   color: var(--main-black-color);
 }
 /* ---logo */
@@ -729,7 +729,7 @@ img {
   margin-right: 70px;
 }
 
-.logo--white {
+.footer__logo--white {
   color: var(--main-white-color);
 }
 
